@@ -234,6 +234,8 @@ img::EasyImage generate_image(const ini::Configuration &confg) {
         return ColorRectangle(type, width, height);
     }
     else if (type == "IntroBlocks") {
+        width = confg["ImageProperties"]["width"].as_int_or_die();
+        height = confg["ImageProperties"]["height"].as_int_or_die();
         ini::DoubleTuple colorWhite = confg["BlockProperties"]["colorWhite"].as_double_tuple_or_die();
         ini::DoubleTuple colorBlack = confg["BlockProperties"]["colorBlack"].as_double_tuple_or_die();
         int nxB = confg["BlockProperties"]["nrXBlocks"].as_int_or_die();

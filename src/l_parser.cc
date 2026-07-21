@@ -325,6 +325,8 @@ namespace
 			{
 				case '+':
 				case '-':
+				case ' ':
+				case '\t':
 					break;
 				case '^':
 				case '&':
